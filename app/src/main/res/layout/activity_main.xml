@@ -9,7 +9,7 @@
     <Button
         android:id="@+id/button2"
         android:layout_width="269dp"
-        android:layout_height="72dp"
+        android:layout_height="73dp"
         android:text="Regresion Lineal"
         tools:layout_editor_absoluteX="58dp"
         tools:layout_editor_absoluteY="86dp" />
