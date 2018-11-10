@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Regresionapp.iml" filepath="$PROJECT_DIR$/Regresionapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/regresionapp.iml" filepath="$PROJECT_DIR$/regresionapp.iml" />
     </modules>
   </component>
 </project>
