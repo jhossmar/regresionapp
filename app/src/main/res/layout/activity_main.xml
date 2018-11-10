@@ -6,20 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="56dp" />
+
     <Button
         android:id="@+id/button2"
         android:layout_width="269dp"
         android:layout_height="73dp"
-        android:text="Regresion Lineal"
+        android:text="@string/btn_reg_lineal_text"
         tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="86dp" />
+        tools:layout_editor_absoluteY="174dp" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="256dp"
         android:layout_height="84dp"
-        android:layout_marginTop="148dp"
-        android:text="Regresion No lineal"
+        android:layout_marginTop="172dp"
+        android:text="@string/btn_reg_no_lineal_text"
         app:layout_constraintTop_toBottomOf="@+id/button2"
         tools:layout_editor_absoluteX="64dp" />
 </android.support.constraint.ConstraintLayout>
