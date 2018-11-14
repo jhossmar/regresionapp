@@ -1,27 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LinealActivity">
+    tools:context=".LinealActivity"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorPrimary">
 
-    <Button
-        android:id="@+id/btn_atras"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_atras"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="0dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
 
-    <TextView
-        android:id="@+id/title_activity_lineal"
-        android:layout_width="245dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="11dp"
-        android:text="REGRESION LINEAL SIMPLE"
-        app:layout_constraintStart_toEndOf="@+id/btn_atras"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="8dp" />
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_view_numero"/>
+
+                <EditText
+                    android:id="@+id/editText_number_imputs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="@android:color/black"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_view_x"/>
+
+                <EditText
+                    android:id="@+id/editText_lineal_x"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="@android:color/black"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_view_y"/>
+
+                <EditText
+                    android:id="@+id/editText_lineal_y"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="@android:color/black"></EditText>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/joinUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_ingresar"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

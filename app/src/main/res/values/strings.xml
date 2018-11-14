@@ -4,4 +4,9 @@
     <string name="btn_reg_no_lineal_text">REGRESION NO LINEAL</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="btn_atras">ATRAS</string>
+    <string name="title_activity_basic">BasicActivity</string>
+    <string name="btn_ingresar">INGRESAR</string>
+    <string name="text_view_x">ingresar datos para "x"</string>
+    <string name="text_view_y">ingresar datos para "y"</string>
+    <string name="text_view_numero">Digite numero de datos</string>
 </resources>
