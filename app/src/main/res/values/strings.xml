@@ -2,4 +2,6 @@
     <string name="app_name">Regresionapp</string>
     <string name="btn_reg_lineal_text">REGRESION LINEAL</string>
     <string name="btn_reg_no_lineal_text">REGRESION NO LINEAL</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="btn_atras">ATRAS</string>
 </resources>
