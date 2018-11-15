@@ -66,7 +66,7 @@ public class Lineal extends Regresion
         calculosAB();
         calcularSigmaDelta();
 
-        new Resultado(Tipo.LINEAL);
+        resultado = new Resultado(Tipo.LINEAL);
         resultado.setParamA(A);
         resultado.setParamB(B);
         resultado.setErrorA(calcularErrorA());

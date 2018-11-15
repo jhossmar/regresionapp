@@ -29,7 +29,7 @@ public class Regresion
      }
 
      public  void addy(Double y){
-          datosx.add(y);
+          datosy.add(y);
      }
 
      public Resultado calcularResultado(){
