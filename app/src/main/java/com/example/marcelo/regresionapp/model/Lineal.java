@@ -162,7 +162,6 @@ public class Lineal extends Regresion
         double sumatoriaDiscrepancia2=(sumatoriaY2)-((2)*(A)*(sumatoriaY))-((2)*(B)*(sumatoriaXY))+((tam)*(Math.pow(A,2)))+((2)*(A)*(B)*(sumatoriaX))+((Math.pow(B,2))*(sumatoriaX2));
         sigma2=(sumatoriaDiscrepancia2)/((tam)-(2));
 
-
     }
 
 
