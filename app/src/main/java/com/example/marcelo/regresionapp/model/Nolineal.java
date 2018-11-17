@@ -72,7 +72,7 @@ public class Nolineal extends Regresion
         calcularSigmaDelta();
 
         int TEMP = 2; // OJO TEMPORAL
-        calcularParametro_a(2); //COMO DETERMINO LA BASE????
+        calcularParametro_a(TEMP); //COMO DETERMINO LA BASE????
         resultado = new Resultado(Tipo.NO_LINEAL);
         resultado.setParamA(A);
         resultado.setParamB(B);
