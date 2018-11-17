@@ -94,7 +94,8 @@ public class LinealActivity extends Activity {
 
     public void calcular(View view) {
         int tam = listx.size();
-        final Regresion regresion = new Regresion(tam);
+        Log.d("TAMAÑOS DE ARRAYS",""+tam);
+        Regresion regresion = new Lineal(tam);
 
         for (int i= 0 ; i<tam; i++){
             regresion.addx(listx.get(i));
@@ -102,8 +103,7 @@ public class LinealActivity extends Activity {
         for (int i= 0 ; i<tam; i++){
             regresion.addy(listy.get(i));
         }
-        Resultado resultado = new Resultado(Tipo.LINEAL);
-        regresion.calcularResultado();
+       Resultado resultado = regresion.calcularResultado();
 
         listItems.clear();
         listItems.add("PARAMETRO  A = "+resultado.getParamA());
