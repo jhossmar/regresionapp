@@ -21,7 +21,12 @@
             android:label="@string/title_activity_main2" />
         <activity
             android:name=".BasicActivity"
-            android:label="@string/title_activity_basic"></activity>
+            android:label="@string/title_activity_basic" />
+        <activity
+            android:name=".ReferenciaActivity"
+            android:label="@string/title_activity_referencia"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".NoLinealActivity"></activity>
     </application>
 
 </manifest>

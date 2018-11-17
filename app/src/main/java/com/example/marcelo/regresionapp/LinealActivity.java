@@ -5,12 +5,14 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.text.Layout;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.marcelo.regresionapp.model.Lineal;
 import com.example.marcelo.regresionapp.model.Regresion;
@@ -63,9 +65,10 @@ public class LinealActivity extends Activity {
 
             actualizarLista();
             vaciarImputs();
+            mostrarToast("ADD DATOS: OK");
 
         }else {
-            Log.d("SOBRE LOS DATOS","mostrar error: COMPLETAR DATOS");
+            mostrarToast("¡Debe completar todos los campos!");
 
         }
     }
@@ -111,6 +114,13 @@ public class LinealActivity extends Activity {
         listItems.add("Error A = "+resultado.getErrorA());
         listItems.add("Error B = "+resultado.getErrorB());
         actualizarLista();
-
     }
+
+   private void mostrarToast(String msg){
+
+     Toast toast2=   Toast.makeText(getBaseContext(),""+msg, Toast.LENGTH_LONG);
+     toast2.setGravity(Gravity.RIGHT|Gravity.RIGHT,0,0);
+     toast2.show();
+
+   };
 }

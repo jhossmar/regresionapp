@@ -10,4 +10,7 @@
     <string name="text_view_y">ingresar datos para "y"</string>
     <string name="text_view_numero">Digite numero de datos</string>
     <string name="btn_calcular">CALCULAR</string>
+    <string name="title_activity_referencia">ReferenciaActivity</string>
+    <string name="input_datox">valor de x</string>
+    <string name="input_datoy">valor de y</string>
 </resources>

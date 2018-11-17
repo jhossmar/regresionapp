@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".LinealActivity"
     android:fitsSystemWindows="true"
+
     android:background="@color/colorPrimary">
 
     <ScrollView
