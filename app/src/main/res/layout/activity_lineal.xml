@@ -73,16 +73,26 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/joinUs"
+                android:id="@+id/add_dato"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_ingresar"
+                android:onClick="ingresarDato"
                 />
+            <Button
+                android:id="@+id/calcular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_calcular"
+                android:onClick="calcular"
+                />
+
+            <ListView
+                android:id="@+id/lista_de_datos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></ListView>
         </LinearLayout>
     </ScrollView>
-
-
-
 
 
 

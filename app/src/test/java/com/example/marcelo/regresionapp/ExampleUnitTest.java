@@ -59,6 +59,8 @@ public class ExampleUnitTest {
         Resultado resultado2 = regresion2.calcularResultado();
         System.out.println("RESULTADO A= "+ resultado2.getParamA());
         System.out.println("RESULTADO B= "+ resultado2.getParamB());
+        System.out.println("EroorA="+resultado2.getErrorA());
+        System.out.println("EroorB="+resultado2.getErrorB());
 
        assertEquals(-0.027,resultado2.getParamA(),0.0001);
        assertEquals(8.665,resultado2.getParamB(),0.0001);
