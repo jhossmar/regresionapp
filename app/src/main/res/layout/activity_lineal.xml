@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".LinealActivity"
     android:fitsSystemWindows="true"
-
     android:background="@color/colorPrimary">
 
     <ScrollView
@@ -21,56 +20,47 @@
             android:orientation="vertical"
             >
 
-
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:orientation="vertical">-->
-                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:text="@string/text_view_numero"/>&ndash;&gt;-->
-
-                <!--<EditText-->
-                    <!--android:id="@+id/editText_number_imputs"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:inputType="numberDecimal"-->
-                    <!--android:textColor="@android:color/black"></EditText>-->
-            <!--</LinearLayout>-->
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <TextView
+
+
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/text_view_x"/>
-
-                <EditText
+                    >
+                <android.support.design.widget.TextInputEditText
                     android:id="@+id/editText_lineal_x"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
-                    android:textColor="@android:color/black"></EditText>
+                    android:hint="@string/text_view_x"
+                    />
+
+                </android.support.design.widget.TextInputLayout>
+
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <TextView
+
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/text_view_y"/>
-
-                <EditText
+                    >
+                <android.support.design.widget.TextInputEditText
                     android:id="@+id/editText_lineal_y"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
-                    android:textColor="@android:color/black"></EditText>
+                    android:hint="@string/text_view_y"
+                    />
+
+                </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 
             <Button
@@ -79,6 +69,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/btn_ingresar"
                 android:onClick="ingresarDato"
+
                 />
             <Button
                 android:id="@+id/calcular"
@@ -86,6 +77,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/btn_calcular"
                 android:onClick="calcular"
+
                 />
 
             <ListView

@@ -118,7 +118,7 @@ public class LinealActivity extends Activity {
 
    private void mostrarToast(String msg){
 
-     Toast toast2=   Toast.makeText(getBaseContext(),""+msg, Toast.LENGTH_LONG);
+     Toast toast2=   Toast.makeText(getBaseContext(),""+msg, Toast.LENGTH_SHORT);
      toast2.setGravity(Gravity.RIGHT|Gravity.RIGHT,0,0);
      toast2.show();
 
