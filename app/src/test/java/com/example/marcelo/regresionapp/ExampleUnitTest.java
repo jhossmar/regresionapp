@@ -1,6 +1,7 @@
 package com.example.marcelo.regresionapp;
 
 import com.example.marcelo.regresionapp.model.Lineal;
+import com.example.marcelo.regresionapp.model.Nolineal;
 import com.example.marcelo.regresionapp.model.Regresion;
 import com.example.marcelo.regresionapp.model.Resultado;
 
@@ -20,7 +21,7 @@ public class ExampleUnitTest {
       Regresion regresion2;
     @Before
     public void before(){
-        regresion1 = new Lineal(6);
+        regresion1 = new Nolineal(6);
         regresion2 = new Lineal(5);
 
         regresion1.addx(2.221);
@@ -52,11 +53,17 @@ public class ExampleUnitTest {
     }
     @Test
     public void probarDatos() {
-//        Resultado resultado = regresion1.calcularResultado();
-//        System.out.println("RESULTADO A= "+ resultado.getParamA());
-//        System.out.println("RESULTADO B= "+ resultado.getParamB());
+        System.out.println("REGRESION NO LINEAL");
+        Resultado resultado = regresion1.calcularResultado();
+        System.out.println("RESULTADO A = "+resultado.getParamA());
+        System.out.println("RESULTADO B = "+resultado.getParamB());
+        System.out.println("RESULTADO param_a= "+ resultado.getParam_a());
+        System.out.println("RESULTADO param_b= "+ resultado.getParam_b());
+
+        System.out.println(" ");
 
         Resultado resultado2 = regresion2.calcularResultado();
+        System.out.println("REGRESION LINEAL");
         System.out.println("RESULTADO A= "+ resultado2.getParamA());
         System.out.println("RESULTADO B= "+ resultado2.getParamB());
         System.out.println("EroorA="+resultado2.getErrorA());

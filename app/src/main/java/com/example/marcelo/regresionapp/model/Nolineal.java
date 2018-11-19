@@ -2,6 +2,8 @@ package com.example.marcelo.regresionapp.model;
 
 import android.util.Log;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 
 /**
@@ -48,7 +50,7 @@ public class Nolineal extends Regresion
 
         this.delta =0;
         this.sigma2=0;
-        this.A=0;
+        this.A= 0;
         this.B=0;
 
 
@@ -71,23 +73,33 @@ public class Nolineal extends Regresion
         calculosAB();
         calcularSigmaDelta();
 
-        int TEMP = 2; // OJO TEMPORAL
-        calcularParametro_a(TEMP); //COMO DETERMINO LA BASE????
         resultado = new Resultado(Tipo.NO_LINEAL);
         resultado.setParamA(A);
         resultado.setParamB(B);
         resultado.setErrorA(calcularErrorA());
         resultado.setErrorB(calcularErrorB());
 
+        resultado.setParam_b(B);
+
+        calcularParametro_a(resultado); //COMO DETERMINO LA BASE????
+
         return resultado;
     }
 
-    private void calcularParametro_a( int base) {
-         if (base != 10){
-             parametro_a = Math.pow(10,A);
-         }else{
-             parametro_a =Math.exp(A);
-         }
+    private void calcularParametro_a( Resultado res) {
+
+
+        //parametro_a = Double.parseDouble(""+Math.exp(A)*res.getErrorA());
+        parametro_a = Math.pow(10,A)*res.getErrorA();
+        System.out.println("paramatro_a=== "+parametro_a);
+
+        System.out.println("VALOR DE A ="+A );
+        System.out.println("VAlOR DE e(A) = "+Math.exp(A));
+        System.out.println("VALOR DE ErrorA="+res.getErrorA());
+        System.out.println(" ");
+        res.setParam_a(parametro_a);
+
+
     }
 
     private double calcularErrorA() {
@@ -180,18 +192,14 @@ public class Nolineal extends Regresion
     }
 
     public void aplicarLogNatural(){
-        ArrayList<Double> tempx = datosx;
-        ArrayList<Double> tempy = datosy;
-        datosx.clear();
-        datosy.clear();
 
-        for (double x :tempx) {
-            datosx.add(Math.log(x));
+
+        for (double x :datosx) {
+            datosx.set(datosx.indexOf(x),Math.log10(x));
         }
-        for (double y :tempy) {
-            datosy.add(Math.log(y));
+        for (double y :datosy) {
+            datosy.set(datosy.indexOf(y),Math.log10(y));
         }
-        Log.d("fun cal log nat","Tam datosx"+datosx.size());
-        Log.d("fun cal log nat","Tam datosy"+datosy.size());
+
     }
 }

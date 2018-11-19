@@ -1,5 +1,7 @@
 package com.example.marcelo.regresionapp.model;
 
+import java.math.BigDecimal;
+
 /**
  * Write a description of class Resultado here.
  * 
@@ -41,7 +43,7 @@ public class Resultado
     return paramA;
   }
 
-  public void setParamA(double paramA) {
+  public void setParamA(Double paramA) {
     this.paramA = paramA;
   }
 

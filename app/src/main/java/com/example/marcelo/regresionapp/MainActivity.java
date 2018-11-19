@@ -21,11 +21,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(itent);
             }
         });
-
-
-    }
-
-    public void goToNolinealActivity(View view) {
         Button btn_no_lineal = (Button)findViewById(R.id.btn_no_lineal);
         btn_no_lineal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,5 +30,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
     }
+
 }
