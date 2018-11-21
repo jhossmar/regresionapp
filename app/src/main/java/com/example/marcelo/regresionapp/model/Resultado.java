@@ -18,6 +18,8 @@ public class Resultado
   double errorA;
   double errorB;
 
+  double error_param_a;
+
   public Resultado(Tipo tipo){
     this.tipoResultado = tipo;
 
@@ -77,5 +79,13 @@ public class Resultado
 
   public void setParam_b(double param_b) {
     this.param_b = param_b;
+  }
+
+  public double getError_param_a() {
+    return error_param_a;
+  }
+
+  public void setError_param_a(double error_param_a) {
+    this.error_param_a = error_param_a;
   }
 }

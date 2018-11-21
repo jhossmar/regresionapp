@@ -63,6 +63,7 @@ public class ExampleUnitTest {
         System.out.println("RESULTADO param_b= "+ resultado.getParam_b());
         System.out.println("ErrorA = "+ resultado.getErrorA());
         System.out.println("ErroB = "+ resultado.getErrorB());
+        System.out.println("Errror_param_a"+resultado.getError_param_a());
 
         System.out.println(" ");
 

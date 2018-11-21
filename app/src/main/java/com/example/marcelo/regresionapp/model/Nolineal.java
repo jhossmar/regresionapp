@@ -90,14 +90,9 @@ public class Nolineal extends Regresion
 
 
         //parametro_a = Double.parseDouble(""+Math.exp(A)*res.getErrorA());
-        parametro_a = Math.pow(10,A)*res.getErrorA();
-        System.out.println("paramatro_a=== "+parametro_a);
-
-        System.out.println("VALOR DE A ="+A );
-        System.out.println("VAlOR DE e(A) = "+Math.exp(A));
-        System.out.println("VALOR DE ErrorA="+res.getErrorA());
-        System.out.println(" ");
+        parametro_a = Math.pow(10,A);
         res.setParam_a(parametro_a);
+        res.setError_param_a(parametro_a*res.getErrorA());
 
 
     }
