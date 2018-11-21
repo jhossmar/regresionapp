@@ -3,6 +3,8 @@ package com.example.marcelo.regresionapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.Layout;
 import android.util.Log;
 import android.view.Gravity;
@@ -21,7 +23,7 @@ import com.example.marcelo.regresionapp.model.Tipo;
 
 import java.util.ArrayList;
 
-public class LinealActivity extends Activity {
+public class LinealActivity extends AppCompatActivity {
 
     EditText editTextX;
     EditText editTextY;
@@ -37,6 +39,7 @@ public class LinealActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lineal);
+        showToolbar("REGRESION LINEAL", true);
 
         listx = new ArrayList<Double>();
         listy = new ArrayList<Double>();
@@ -52,8 +55,15 @@ public class LinealActivity extends Activity {
                 listItems);
         listView.setAdapter(adapter);
 
+
     }
 
+    public void showToolbar(String titulo, boolean upButton){
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(titulo);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
+    }
     public void ingresarDato(View view) {
         if (!vacio(editTextX.getText().toString()) && !vacio(editTextY.getText().toString())){
             listx.add(Double.parseDouble(editTextX.getText().toString()));

@@ -8,6 +8,7 @@
     android:background="@color/colorPrimary"
     android:orientation="vertical">
 
+        <include layout="@layout/layout_toolbar"/>
 
 
         <Button
@@ -66,25 +67,5 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="268dp"
-            android:layout_height="69dp"
-            android:layout_marginStart="58dp"
-            android:layout_marginEnd="58dp"
-            android:layout_marginBottom="8dp"
-            android:text="MÍNIMOS CUADRADOS"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimaryLight"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        >
-
-
 
 </android.support.constraint.ConstraintLayout>

@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.support.v7.widget.Toolbar;
+//import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,8 +31,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(itent);
             }
         });
+        showToolbar(getResources().getString(R.string.toolbar_title_mainActivity),false);
 
+    }
 
+    public void showToolbar(String titulo, boolean upButton){
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(titulo);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
     }
 
 }

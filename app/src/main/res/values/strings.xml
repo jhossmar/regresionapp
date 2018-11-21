@@ -13,4 +13,5 @@
     <string name="title_activity_referencia">ReferenciaActivity</string>
     <string name="input_datox">valor de x</string>
     <string name="input_datoy">valor de y</string>
+    <string name="toolbar_title_mainActivity">MINIMOS CUADRADOS</string>
 </resources>

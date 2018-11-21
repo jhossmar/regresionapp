@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ReferenciaActivity"
     tools:showIn="@layout/activity_referencia"
-
     >
 
 </android.support.constraint.ConstraintLayout>
