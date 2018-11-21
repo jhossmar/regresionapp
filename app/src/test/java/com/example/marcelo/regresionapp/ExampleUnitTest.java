@@ -8,6 +8,8 @@ import com.example.marcelo.regresionapp.model.Resultado;
 import org.junit.Before;
 import org.junit.Test;
 
+import javax.xml.transform.sax.SAXSource;
+
 import static org.junit.Assert.*;
 
 /**
@@ -59,6 +61,8 @@ public class ExampleUnitTest {
         System.out.println("RESULTADO B = "+resultado.getParamB());
         System.out.println("RESULTADO param_a= "+ resultado.getParam_a());
         System.out.println("RESULTADO param_b= "+ resultado.getParam_b());
+        System.out.println("ErrorA = "+ resultado.getErrorA());
+        System.out.println("ErroB = "+ resultado.getErrorB());
 
         System.out.println(" ");
 
