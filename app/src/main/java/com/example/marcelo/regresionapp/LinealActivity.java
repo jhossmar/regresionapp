@@ -58,20 +58,13 @@ public class LinealActivity extends AppCompatActivity {
 
     }
 
-    public void showToolbar(String titulo, boolean upButton){
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(titulo);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
-    }
+
     public void ingresarDato(View view) {
         if (!vacio(editTextX.getText().toString()) && !vacio(editTextY.getText().toString())){
             listx.add(Double.parseDouble(editTextX.getText().toString()));
             listy.add(Double.parseDouble(editTextY.getText().toString()));
-            listItems.add(listItems.size()+"x="+editTextX.getText().toString()+"y="+editTextY.getText().toString());
+            listItems.add(listItems.size()+") "+" x = "+editTextX.getText().toString()+" y = "+editTextY.getText().toString());
 
-            Log.d("VALOR DATO X"," ="+Double.parseDouble(editTextX.getText().toString()));
-            Log.d("VALOR DATO Y"," ="+Double.parseDouble(editTextY.getText().toString()));
 
             actualizarLista();
             vaciarImputs();
@@ -119,35 +112,34 @@ public class LinealActivity extends AppCompatActivity {
             }
             Resultado resultado = regresion.calcularResultado();
 
-            Intent intent = new Intent(this,ResContainer.class);
+            Intent intent = new Intent(LinealActivity.this,ResContainer.class);
 
-            intent.putExtra("A",resultado.getParamA());
-            intent.putExtra("B",resultado.getParamB());
-            intent.putExtra("ErrorA",resultado.getErrorA());
-            intent.putExtra("ErrorB",resultado.getErrorB());
-            if (resultado.getTipoResultado() == Tipo.NO_LINEAL){
-                intent.putExtra("param_a",resultado.getParam_a());
-                intent.putExtra("param_a",resultado.getParam_b());
-            }
+            intent.putExtra("A",String.valueOf(resultado.getParamA()));
+            intent.putExtra("B",String.valueOf(resultado.getParamB()));
+            intent.putExtra("ErrorA",String.valueOf(resultado.getErrorA()));
+            intent.putExtra("ErrorB",String.valueOf(resultado.getErrorB()));
+            intent.putExtra("param_a",String.valueOf(resultado.getParam_a()));
+            intent.putExtra("param_b",String.valueOf(resultado.getParam_b()));
+            intent.putExtra("error_param_a",String.valueOf(resultado.getError_param_a()));
+
             startActivity(intent);
 
         }else {
             mostrarToast("Se debe introducir los datos primero");
         }
-
-//        listItems.clear();
-//        listItems.add("PARAMETRO  A = "+resultado.getParamA());
-//        listItems.add("PARAMETRO  B = "+resultado.getParamB());
-//        listItems.add("Error A = "+resultado.getErrorA());
-//        listItems.add("Error B = "+resultado.getErrorB());
-//        actualizarLista();
     }
-
    private void mostrarToast(String msg){
-
      Toast toast2=   Toast.makeText(getBaseContext(),""+msg, Toast.LENGTH_SHORT);
      toast2.setGravity(Gravity.RIGHT|Gravity.RIGHT,0,0);
      toast2.show();
+   }
 
-   };
+    public void showToolbar(String titulo, boolean upButton){
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(titulo);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
+    }
+
+
 }

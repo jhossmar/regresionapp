@@ -17,4 +17,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="res_paramA">Parametro A</string>
+    <string name="res_paramB">Parametro B</string>
+    <string name="param_a">Parametro a</string>
+    <string name="res_param_b">Parametro b</string>
 </resources>
