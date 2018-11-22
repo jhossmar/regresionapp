@@ -16,33 +16,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".LinealActivity"
             android:label="@string/title_activity_main2">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"
-                ></meta-data>
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".BasicActivity"
-            android:label="@string/title_activity_basic">
-
-        </activity>
+            android:label="@string/title_activity_basic"></activity>
         <activity
             android:name=".ReferenciaActivity"
             android:label="@string/title_activity_referencia"
             android:theme="@style/AppTheme" />
-        <activity
-            android:name=".NoLinealActivity">
+        <activity android:name=".NoLinealActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity">
-
-            </meta-data>
-
+                android:value=".MainActivity"></meta-data>
         </activity>
+        <activity android:name=".ResContainer"></activity>
     </application>
 
 </manifest>

@@ -107,23 +107,40 @@ public class LinealActivity extends AppCompatActivity {
 
     public void calcular(View view) {
         int tam = listx.size();
-        Log.d("TAMAÑOS DE ARRAYS",""+tam);
-        Regresion regresion = new Lineal(tam);
+        if (tam > 0) {
+            Log.d("TAMAÑOS DE ARRAYS", "" + tam);
+            Regresion regresion = new Lineal(tam);
 
-        for (int i= 0 ; i<tam; i++){
-            regresion.addx(listx.get(i));
-        }
-        for (int i= 0 ; i<tam; i++){
-            regresion.addy(listy.get(i));
-        }
-       Resultado resultado = regresion.calcularResultado();
+            for (int i = 0; i < tam; i++) {
+                regresion.addx(listx.get(i));
+            }
+            for (int i = 0; i < tam; i++) {
+                regresion.addy(listy.get(i));
+            }
+            Resultado resultado = regresion.calcularResultado();
 
-        listItems.clear();
-        listItems.add("PARAMETRO  A = "+resultado.getParamA());
-        listItems.add("PARAMETRO  B = "+resultado.getParamB());
-        listItems.add("Error A = "+resultado.getErrorA());
-        listItems.add("Error B = "+resultado.getErrorB());
-        actualizarLista();
+            Intent intent = new Intent(this,ResContainer.class);
+
+            intent.putExtra("A",resultado.getParamA());
+            intent.putExtra("B",resultado.getParamB());
+            intent.putExtra("ErrorA",resultado.getErrorA());
+            intent.putExtra("ErrorB",resultado.getErrorB());
+            if (resultado.getTipoResultado() == Tipo.NO_LINEAL){
+                intent.putExtra("param_a",resultado.getParam_a());
+                intent.putExtra("param_a",resultado.getParam_b());
+            }
+            startActivity(intent);
+
+        }else {
+            mostrarToast("Se debe introducir los datos primero");
+        }
+
+//        listItems.clear();
+//        listItems.add("PARAMETRO  A = "+resultado.getParamA());
+//        listItems.add("PARAMETRO  B = "+resultado.getParamB());
+//        listItems.add("Error A = "+resultado.getErrorA());
+//        listItems.add("Error B = "+resultado.getErrorB());
+//        actualizarLista();
     }
 
    private void mostrarToast(String msg){
