@@ -14,7 +14,6 @@ import org.w3c.dom.Text;
 
 public class ResContainer extends AppCompatActivity {
 
-    ResultadosFragment resultadosFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
