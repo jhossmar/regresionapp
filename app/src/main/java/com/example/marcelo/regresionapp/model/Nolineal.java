@@ -89,8 +89,8 @@ public class Nolineal extends Regresion
     private void calcularParametro_a( Resultado res) {
 
 
-        //parametro_a = Double.parseDouble(""+Math.exp(A)*res.getErrorA());
-        parametro_a = Math.pow(10,A);
+        parametro_a = Math.exp(A);
+        //parametro_a = Math.pow(10,A);
         res.setParam_a(parametro_a);
         res.setError_param_a(parametro_a*res.getErrorA());
 
@@ -190,10 +190,10 @@ public class Nolineal extends Regresion
 
 
         for (double x :datosx) {
-            datosx.set(datosx.indexOf(x),Math.log10(x));
+            datosx.set(datosx.indexOf(x),Math.log(x));
         }
         for (double y :datosy) {
-            datosy.set(datosy.indexOf(y),Math.log10(y));
+            datosy.set(datosy.indexOf(y),Math.log(y));
         }
 
     }
