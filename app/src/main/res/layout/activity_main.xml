@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,64 +9,51 @@
     android:background="@color/colorPrimary"
     android:orientation="vertical">
 
-        <include layout="@layout/layout_toolbar"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                        <include layout="@layout/layout_toolbar"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp"
+                            android:scaleX="2"
+                            android:scaleY="2"
+                            android:src="@drawable/reg_lineal"
+                            android:textAlignment="center" />
+                        <Button
+                            android:id="@+id/btn_lineal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorAccent"
+                            android:layout_margin="45dp"
+                            android:text="REGRESION LINEAL"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/regresion_no_lineal"
+                            android:scaleY="1.5"
+                            android:scaleX="2.7"
+                            />
+                        <Button
+                            android:id="@+id/btn_no_lineal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorAccent"
+                            android:layout_margin="45dp"
+                            android:text="REGRESION NO LINEAL"/>
 
 
-        <Button
-            android:id="@+id/btn_lineal"
-            android:layout_width="269dp"
-            android:layout_height="72dp"
-            android:layout_marginStart="64dp"
-            android:layout_marginEnd="64dp"
-            android:layout_marginBottom="16dp"
-            android:background="@color/colorAccent"
-            android:text="Regresion Lineal"
-            android:textColor="@android:color/black"
-            app:layout_constraintBottom_toTopOf="@+id/imageView2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints" />
+                </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_no_lineal"
-            android:layout_width="265dp"
-            android:layout_height="77dp"
-            android:layout_marginStart="64dp"
-            android:layout_marginEnd="64dp"
-            android:background="@color/colorAccent"
-            android:text="Regresion No lineal"
-            android:textColor="@android:color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints" />
+        </ScrollView>
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="275dp"
-            android:layout_height="153dp"
-            android:layout_marginStart="64dp"
-            android:layout_marginEnd="64dp"
-            android:layout_marginBottom="16dp"
-            android:src="@drawable/reg_lineal"
-            app:layout_constraintBottom_toTopOf="@+id/btn_lineal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="259dp"
-            android:layout_height="140dp"
-            android:layout_marginStart="64dp"
-            android:layout_marginEnd="60dp"
-            android:layout_marginBottom="8dp"
-            android:src="@drawable/regresion_no_lineal"
-            app:layout_constraintBottom_toTopOf="@+id/btn_no_lineal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
-
-</android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>
