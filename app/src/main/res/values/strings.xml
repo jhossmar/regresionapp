@@ -1,5 +1,24 @@
 <resources>
-    <string name="app_name">Regresionapp</string>
+    <string name="app_name">REGRESIONAPP</string>
     <string name="btn_reg_lineal_text">REGRESION LINEAL</string>
     <string name="btn_reg_no_lineal_text">REGRESION NO LINEAL</string>
+    <string name="title_activity_main2">REGRESION LINEAL</string>
+    <string name="btn_atras">ATRAS</string>
+    <string name="title_activity_basic">BasicActivity</string>
+    <string name="btn_ingresar">INGRESAR</string>
+    <string name="text_view_x">ingresar datos para "x"</string>
+    <string name="text_view_y">ingresar datos para "y"</string>
+    <string name="text_view_numero">Digite numero de datos</string>
+    <string name="btn_calcular">CALCULAR</string>
+    <string name="title_activity_referencia">ReferenciaActivity</string>
+    <string name="input_datox">valor de x</string>
+    <string name="input_datoy">valor de y</string>
+    <string name="toolbar_title_mainActivity">MINIMOS CUADRADOS</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="res_paramA">Parametro A</string>
+    <string name="res_paramB">Parametro B</string>
+    <string name="param_a">Parametro a</string>
+    <string name="res_param_b">Parametro b</string>
 </resources>
