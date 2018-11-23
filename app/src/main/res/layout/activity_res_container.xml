@@ -72,7 +72,8 @@
             android:id="@+id/valor_param_b"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:textAlignment="center"/>
     </LinearLayout>
 
 
