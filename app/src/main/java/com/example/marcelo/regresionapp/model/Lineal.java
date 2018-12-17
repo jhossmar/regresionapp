@@ -27,6 +27,7 @@ public class Lineal extends Regresion
     private double B;
     private double delta;
     private double sigma2;
+    private double coeficiente_correl;
 
 
 
@@ -47,6 +48,7 @@ public class Lineal extends Regresion
         this.sigma2=0;
         this.A=0;
         this.B=0;
+        this.coeficiente_correl= 0;
 
 
 
@@ -65,14 +67,21 @@ public class Lineal extends Regresion
         sumatoriaY2();
         calculosAB();
         calcularSigmaDelta();
+        calcularCorrelacion();
 
         resultado = new Resultado(Tipo.LINEAL);
         resultado.setParamA(A);
         resultado.setParamB(B);
         resultado.setErrorA(calcularErrorA());
         resultado.setErrorB(calcularErrorB());
+        resultado.setCoef_corrl(coeficiente_correl);
 
         return resultado;
+    }
+
+    private void calcularCorrelacion() {
+        coeficiente_correl = ((tam * sumatoriaXY)-(sumatoriaX*sumatoriaY))/(Math.sqrt((((tam*sumatoriaX2)-(Math.pow(sumatoriaX,2)))*((tam*sumatoriaY2)-(Math.pow(sumatoriaY,2))))));
+
     }
 
     private double calcularErrorA() {

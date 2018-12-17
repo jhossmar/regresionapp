@@ -32,7 +32,7 @@ public class Nolineal extends Regresion
 
     private double parametro_a;
     private double paramtro_b;
-
+    private double coeficiente_correl;
 
 
     public Nolineal(int tam) {
@@ -52,6 +52,7 @@ public class Nolineal extends Regresion
         this.sigma2=0;
         this.A= 0;
         this.B=0;
+        coeficiente_correl = 0;
 
 
 
@@ -72,6 +73,7 @@ public class Nolineal extends Regresion
         sumatoriaY2();
         calculosAB();
         calcularSigmaDelta();
+        calcularCorrelacion();
 
         resultado = new Resultado(Tipo.NO_LINEAL);
         resultado.setParamA(A);
@@ -80,6 +82,7 @@ public class Nolineal extends Regresion
         resultado.setErrorB(calcularErrorB());
 
         resultado.setParam_b(B);
+        resultado.setCoef_corrl(coeficiente_correl);
 
         calcularParametro_a(resultado); //COMO DETERMINO LA BASE????
 
@@ -195,6 +198,10 @@ public class Nolineal extends Regresion
         for (double y :datosy) {
             datosy.set(datosy.indexOf(y),Math.log(y));
         }
+
+    }
+    private void calcularCorrelacion() {
+        coeficiente_correl = ((tam * sumatoriaXY)-(sumatoriaX*sumatoriaY))/(Math.sqrt((((tam*sumatoriaX2)-(Math.pow(sumatoriaX,2)))*((tam*sumatoriaY2)-(Math.pow(sumatoriaY,2))))));
 
     }
 }

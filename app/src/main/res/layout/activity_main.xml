@@ -50,6 +50,30 @@
                             android:layout_margin="45dp"
                             android:text="REGRESION NO LINEAL"/>
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimaryLight"
+                            android:text="desarrollado por:"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:textStyle="bold|italic" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimaryLight"
+                            android:text="Ane Huaniri,  Vania Llanos"
+                            android:textStyle="bold|italic"
+                            android:textAlignment="center"
+                            android:textSize="20dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimaryLight"
+                            android:text="@string/anio"
+                            android:textStyle="bold|italic"
+                            android:textAlignment="center"
+                            android:textSize="20dp"/>
 
                 </LinearLayout>
 

@@ -64,6 +64,8 @@ public class ExampleUnitTest {
         System.out.println("ErrorA = "+ resultado.getErrorA());
         System.out.println("ErroB = "+ resultado.getErrorB());
         System.out.println("Errror_param_a"+resultado.getError_param_a());
+        System.out.println("Correlacion: "+resultado.getCoef_corrl());
+
 
         System.out.println(" ");
 
@@ -73,6 +75,7 @@ public class ExampleUnitTest {
         System.out.println("RESULTADO B= "+ resultado2.getParamB());
         System.out.println("EroorA="+resultado2.getErrorA());
         System.out.println("EroorB="+resultado2.getErrorB());
+        System.out.println("Correlacion: "+resultado2.getCoef_corrl());
 
        assertEquals(-0.027,resultado2.getParamA(),0.0001);
        assertEquals(8.665,resultado2.getParamB(),0.0001);

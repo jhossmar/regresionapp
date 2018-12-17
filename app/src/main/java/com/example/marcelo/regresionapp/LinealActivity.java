@@ -121,6 +121,7 @@ public class LinealActivity extends AppCompatActivity {
             intent.putExtra("param_a",String.valueOf(resultado.getParam_a()));
             intent.putExtra("param_b",String.valueOf(resultado.getParam_b()));
             intent.putExtra("error_param_a",String.valueOf(resultado.getError_param_a()));
+            intent.putExtra("correlacion",String.valueOf(resultado.getCoef_corrl()));
 
             startActivity(intent);
 

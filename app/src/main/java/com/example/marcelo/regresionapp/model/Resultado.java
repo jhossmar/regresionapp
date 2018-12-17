@@ -20,6 +20,16 @@ public class Resultado
 
   double error_param_a;
 
+  public double getCoef_corrl() {
+    return coef_corrl;
+  }
+
+  public void setCoef_corrl(double coef_corrl) {
+    this.coef_corrl = coef_corrl;
+  }
+
+  double coef_corrl;
+
   public Resultado(Tipo tipo){
     this.tipoResultado = tipo;
 

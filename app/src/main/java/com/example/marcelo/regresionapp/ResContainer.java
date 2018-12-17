@@ -41,6 +41,9 @@ public class ResContainer extends AppCompatActivity {
         TextView textView4 = (TextView) findViewById(R.id.valor_param_b);
         textView4.setText("("+intent.getStringExtra("B")+" +- "+intent.getStringExtra("ErrorB")+")");
 
+        TextView textView5 = (TextView) findViewById(R.id.valor_param_coef_correl);
+        textView5.setText(intent.getStringExtra("correlacion"));
+
 }
     public void showToolbar(String titulo, boolean upButton){
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

@@ -61,15 +61,30 @@
             android:textSize="18sp"
             android:textAlignment="center"/>
         <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight"
+        android:text="@string/res_param_b"
+        android:textStyle="bold|italic"
+        android:textAlignment="center"
+        android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/valor_param_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryLight"
-            android:text="@string/res_param_b"
+            android:text="@string/res_param_coeficiente_correlacion"
             android:textStyle="bold|italic"
             android:textAlignment="center"
             android:textSize="20dp"/>
         <TextView
-            android:id="@+id/valor_param_b"
+            android:id="@+id/valor_param_coef_correl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
