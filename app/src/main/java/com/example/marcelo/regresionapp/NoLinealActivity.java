@@ -57,7 +57,7 @@ public class NoLinealActivity extends AppCompatActivity {
         if (!vacio(editTextX.getText().toString()) && !vacio(editTextY.getText().toString())){
             listx.add(Double.parseDouble(editTextX.getText().toString()));
             listy.add(Double.parseDouble(editTextY.getText().toString()));
-            listItems.add(listItems.size()+") "+" x = "+editTextX.getText().toString()+" y = "+editTextY.getText().toString());
+            listItems.add((listItems.size()+1)+") "+" x = "+editTextX.getText().toString()+" y = "+editTextY.getText().toString());
             actualizarLista();
             vaciarImputs();
             mostrarToast("ADD DATOS: OK");
@@ -116,6 +116,9 @@ public class NoLinealActivity extends AppCompatActivity {
             intent.putExtra("de_lineal","false");
             intent.putExtra("porcentualA",obtenerPorceuntual(resultado.getErrorA(),resultado.getParamA()));
             intent.putExtra("porcentualB",obtenerPorceuntual(resultado.getErrorB(),resultado.getParamB()));
+            intent.putExtra("porcentual_a",obtenerPorceuntual(resultado.getError_param_a(),resultado.getParam_a()));
+            intent.putExtra("porcentual_b",obtenerPorceuntual(resultado.getErrorB(),resultado.getParam_b()));
+
 
 
             startActivity(intent);

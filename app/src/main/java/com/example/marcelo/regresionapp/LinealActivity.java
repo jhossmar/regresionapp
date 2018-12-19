@@ -64,7 +64,7 @@ public class LinealActivity extends AppCompatActivity {
         if (!vacio(editTextX.getText().toString()) && !vacio(editTextY.getText().toString())){
             listx.add(Double.parseDouble(editTextX.getText().toString()));
             listy.add(Double.parseDouble(editTextY.getText().toString()));
-            listItems.add(listItems.size()+") "+" x = "+editTextX.getText().toString()+" y = "+editTextY.getText().toString());
+            listItems.add((listItems.size()+1)+") "+" x = "+editTextX.getText().toString()+" y = "+editTextY.getText().toString());
 
 
             actualizarLista();

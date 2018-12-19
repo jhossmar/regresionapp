@@ -37,10 +37,10 @@ public class ResContainer extends AppCompatActivity {
         textView2.setText("("+intent.getStringExtra("B")+" +- "+intent.getStringExtra("ErrorB")+")"+"  " + intent.getStringExtra("porcentualB")+"%");
 
         TextView textView3 = (TextView) findViewById(R.id.valor_param_a);
-        textView3.setText("("+intent.getStringExtra("param_a")+" +- "+intent.getStringExtra("error_param_a")+")");
+        textView3.setText("("+intent.getStringExtra("param_a")+" +- "+intent.getStringExtra("error_param_a")+")"+"  " + intent.getStringExtra("porcentual_a")+"%");
 
         TextView textView4 = (TextView) findViewById(R.id.valor_param_b);
-        textView4.setText("("+intent.getStringExtra("B")+" +- "+intent.getStringExtra("ErrorB")+")");
+        textView4.setText("("+intent.getStringExtra("B")+" +- "+intent.getStringExtra("ErrorB")+")"+"  " + intent.getStringExtra("porcentual_b")+"%");
 
         TextView textView5 = (TextView) findViewById(R.id.valor_param_coef_correl);
         textView5.setText(intent.getStringExtra("correlacion"));
