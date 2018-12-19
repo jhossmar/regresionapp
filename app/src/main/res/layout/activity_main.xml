@@ -54,9 +54,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@color/colorPrimaryLight"
-                            android:text="desarrollado por:"
-                            android:textAlignment="center"
-                            android:textSize="14sp"
+                            android:text="Desarrollado por:"
+                            android:textAlignment="viewStart"
+                            android:textSize="17sp"
                             android:textStyle="bold|italic" />
                         <TextView
                             android:layout_width="match_parent"

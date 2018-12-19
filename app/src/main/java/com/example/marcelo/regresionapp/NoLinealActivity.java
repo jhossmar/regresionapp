@@ -113,6 +113,10 @@ public class NoLinealActivity extends AppCompatActivity {
             intent.putExtra("param_b",String.valueOf(resultado.getParam_b()));
             intent.putExtra("error_param_a",String.valueOf(resultado.getError_param_a()));
             intent.putExtra("correlacion",String.valueOf(resultado.getCoef_corrl()));
+            intent.putExtra("de_lineal","false");
+            intent.putExtra("porcentualA",obtenerPorceuntual(resultado.getErrorA(),resultado.getParamA()));
+            intent.putExtra("porcentualB",obtenerPorceuntual(resultado.getErrorB(),resultado.getParamB()));
+
 
             startActivity(intent);
 
@@ -121,6 +125,21 @@ public class NoLinealActivity extends AppCompatActivity {
         }
     }
 
+    private String obtenerPorceuntual(double errorA, double paramA) {
+        double temp = (errorA/paramA)*100;
+        double res = redondearDecimales(temp,2);
+        return ""+res;
+    }
+
+    private double redondearDecimales(double valorInicial, int numeroDecimales) {
+        double parteEntera, resultado;
+        resultado = valorInicial;
+        parteEntera = Math.floor(resultado);
+        resultado=(resultado-parteEntera)*Math.pow(10, numeroDecimales);
+        resultado=Math.round(resultado);
+        resultado=(resultado/Math.pow(10, numeroDecimales))+parteEntera;
+        return resultado;
+    }
     private void mostrarToast(String msg){
 
         Toast toast2=   Toast.makeText(getBaseContext(),""+msg, Toast.LENGTH_SHORT);
