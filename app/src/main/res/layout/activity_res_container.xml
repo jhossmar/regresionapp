@@ -17,6 +17,52 @@
         >
 
         <include layout="@layout/layout_toolbar"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryLight"
+            android:text="Discrepancia Cuadrado"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/discrepancia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryLight"
+            android:text="Sigma"
+            android:textStyle="bold|italic"
+            android:textAlignment="center"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/sigma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryLight"
+            android:text="Delta"
+            android:textStyle="bold|italic"
+            android:textAlignment="center"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/delta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

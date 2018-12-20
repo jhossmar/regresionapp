@@ -17,6 +17,26 @@ public class Resultado
   double param_b;
   double errorA;
   double errorB;
+  double sigma;
+  double delta;
+
+    public double getSigma() {
+        return sigma;
+    }
+
+    public void setSigma(double sigma) {
+        this.sigma = sigma;
+    }
+
+    public double getDelta() {
+        return delta;
+    }
+
+    public void setDelta(double delta) {
+        this.delta = delta;
+    }
+
+    double sumatoriaDiscrepancia2;
 
   double error_param_a;
 
@@ -32,7 +52,6 @@ public class Resultado
 
   public Resultado(Tipo tipo){
     this.tipoResultado = tipo;
-
   }
 
   public double getErrorA() {
@@ -97,5 +116,12 @@ public class Resultado
 
   public void setError_param_a(double error_param_a) {
     this.error_param_a = error_param_a;
+  }
+
+  public double getSumatoriaDiscrepancia2() {
+    return sumatoriaDiscrepancia2;
+  }
+  public void setSumatoriaDiscrepancia2(double sumatoriaDiscrepancia2) {
+    this.sumatoriaDiscrepancia2 = sumatoriaDiscrepancia2;
   }
 }

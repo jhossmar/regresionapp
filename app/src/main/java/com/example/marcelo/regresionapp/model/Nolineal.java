@@ -33,6 +33,7 @@ public class Nolineal extends Regresion
     private double parametro_a;
     private double paramtro_b;
     private double coeficiente_correl;
+    private double sumatoriaDiscrepancia2;
 
 
     public Nolineal(int tam) {
@@ -53,8 +54,7 @@ public class Nolineal extends Regresion
         this.A= 0;
         this.B=0;
         coeficiente_correl = 0;
-
-
+        sumatoriaDiscrepancia2 = 0;
 
     }
 
@@ -80,6 +80,9 @@ public class Nolineal extends Regresion
         resultado.setParamB(B);
         resultado.setErrorA(calcularErrorA());
         resultado.setErrorB(calcularErrorB());
+        resultado.setSumatoriaDiscrepancia2(sumatoriaDiscrepancia2);
+        resultado.setSigma(sigma2);
+        resultado.setDelta(delta);
 
         resultado.setParam_b(B);
         resultado.setCoef_corrl(coeficiente_correl);
@@ -184,7 +187,7 @@ public class Nolineal extends Regresion
     }
     private void calcularSigmaDelta(){
         delta=((tam)*(sumatoriaX2))-(Math.pow(sumatoriaX,2));
-        double sumatoriaDiscrepancia2=(sumatoriaY2)-((2)*(A)*(sumatoriaY))-((2)*(B)*(sumatoriaXY))+((tam)*(Math.pow(A,2)))+((2)*(A)*(B)*(sumatoriaX))+((Math.pow(B,2))*(sumatoriaX2));
+        sumatoriaDiscrepancia2=(sumatoriaY2)-((2)*(A)*(sumatoriaY))-((2)*(B)*(sumatoriaXY))+((tam)*(Math.pow(A,2)))+((2)*(A)*(B)*(sumatoriaX))+((Math.pow(B,2))*(sumatoriaX2));
         sigma2=(sumatoriaDiscrepancia2)/((tam)-(2));
 
     }

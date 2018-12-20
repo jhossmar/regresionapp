@@ -76,6 +76,10 @@ public class ExampleUnitTest {
         System.out.println("EroorA="+resultado2.getErrorA());
         System.out.println("EroorB="+resultado2.getErrorB());
         System.out.println("Correlacion: "+resultado2.getCoef_corrl());
+        System.out.println("Sigma "+resultado2.getSigma());
+        System.out.println("Delta "+resultado2.getDelta());
+        System.out.println("Discrpancia "+resultado2.getSumatoriaDiscrepancia2());
+
 
        assertEquals(-0.027,resultado2.getParamA(),0.0001);
        assertEquals(8.665,resultado2.getParamB(),0.0001);

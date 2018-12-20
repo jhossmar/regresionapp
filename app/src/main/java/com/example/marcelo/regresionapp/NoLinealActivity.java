@@ -118,7 +118,9 @@ public class NoLinealActivity extends AppCompatActivity {
             intent.putExtra("porcentualB",obtenerPorceuntual(resultado.getErrorB(),resultado.getParamB()));
             intent.putExtra("porcentual_a",obtenerPorceuntual(resultado.getError_param_a(),resultado.getParam_a()));
             intent.putExtra("porcentual_b",obtenerPorceuntual(resultado.getErrorB(),resultado.getParam_b()));
-
+            intent.putExtra("discrepancia",String.valueOf(resultado.getSumatoriaDiscrepancia2()));
+            intent.putExtra("sigma",String.valueOf(resultado.getSigma()));
+            intent.putExtra("delta",String.valueOf(resultado.getDelta()));
 
 
             startActivity(intent);

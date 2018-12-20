@@ -29,29 +29,24 @@ public class Lineal extends Regresion
     private double sigma2;
     private double coeficiente_correl;
 
-
+    private double sumatoriaDiscrepancia2;
 
     public Lineal(int tam) {
         super(tam);
         this.sumatoriaX=0;
         this.sumatoriaY=0;
         this.sumatoriaXY=0;
-
         this.cuadradoX= new double[tam];
         this.cuadradoY= new double[tam];
         this.multiplicacion= new double[tam];
-
         this.sumatoriaX2 = 0;
         this.sumatoriaY2 = 0;
-
         this.delta =0;
         this.sigma2=0;
         this.A=0;
         this.B=0;
         this.coeficiente_correl= 0;
-
-
-
+        this.sumatoriaDiscrepancia2 = 0;
     }
 
     @Override
@@ -75,6 +70,10 @@ public class Lineal extends Regresion
         resultado.setErrorA(calcularErrorA());
         resultado.setErrorB(calcularErrorB());
         resultado.setCoef_corrl(coeficiente_correl);
+        resultado.setSumatoriaDiscrepancia2(sumatoriaDiscrepancia2);
+        resultado.setSigma(sigma2);
+        resultado.setDelta(delta);
+
 
         return resultado;
     }
@@ -139,14 +138,12 @@ public class Lineal extends Regresion
             cuadradoX[i]=this.datosx.get(i)*this.datosx.get(i);
         }
     }
-
     private void sumatoriaX2(){
         for (int i=0;i<tam;i++)
         {
             sumatoriaX2+=cuadradoX[i];
         }
     }
-
     private void cuadradosY(){
         for (int i=0;i<this.tam;i++)
         {
@@ -157,24 +154,15 @@ public class Lineal extends Regresion
         for (int i=0;i<tam;i++)
         {
             sumatoriaY2+=cuadradoY[i];
-
         }
     }
-
     private void calculosAB(){
         A = (((sumatoriaY)*(sumatoriaX2))-((sumatoriaXY)*(sumatoriaX)))/(((tam)*(sumatoriaX2))-(Math.pow(sumatoriaX,2)));
         B = (((tam)*(sumatoriaXY))-((sumatoriaX)*(sumatoriaY)))/(((tam)*(sumatoriaX2))-(Math.pow(sumatoriaX,2)));
-
     }
     private void calcularSigmaDelta(){
         delta=((tam)*(sumatoriaX2))-(Math.pow(sumatoriaX,2));
-        double sumatoriaDiscrepancia2=(sumatoriaY2)-((2)*(A)*(sumatoriaY))-((2)*(B)*(sumatoriaXY))+((tam)*(Math.pow(A,2)))+((2)*(A)*(B)*(sumatoriaX))+((Math.pow(B,2))*(sumatoriaX2));
+        sumatoriaDiscrepancia2=(sumatoriaY2)-((2)*(A)*(sumatoriaY))-((2)*(B)*(sumatoriaXY))+((tam)*(Math.pow(A,2)))+((2)*(A)*(B)*(sumatoriaX))+((Math.pow(B,2))*(sumatoriaX2));
         sigma2=(sumatoriaDiscrepancia2)/((tam)-(2));
-
     }
-
-
-
-
-
 }

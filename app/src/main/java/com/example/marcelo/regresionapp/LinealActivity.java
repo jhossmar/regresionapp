@@ -56,9 +56,7 @@ public class LinealActivity extends AppCompatActivity {
                 listItems);
         listView.setAdapter(adapter);
 
-
     }
-
 
     public void ingresarDato(View view) {
         if (!vacio(editTextX.getText().toString()) && !vacio(editTextY.getText().toString())){
@@ -126,7 +124,9 @@ public class LinealActivity extends AppCompatActivity {
             intent.putExtra("de_lineal","true");
             intent.putExtra("porcentualA",obtenerPorceuntual(resultado.getErrorA(),resultado.getParamA()));
             intent.putExtra("porcentualB",obtenerPorceuntual(resultado.getErrorB(),resultado.getParamB()));
-
+            intent.putExtra("discrepancia",String.valueOf(resultado.getSumatoriaDiscrepancia2()));
+            intent.putExtra("sigma",String.valueOf(resultado.getSigma()));
+            intent.putExtra("delta",String.valueOf(resultado.getDelta()));
 
             startActivity(intent);
 
